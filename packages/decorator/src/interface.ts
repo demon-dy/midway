@@ -187,7 +187,7 @@ export enum MidwayFrameworkType {
   MS_GRPC = '@midwayjs/grpc',
   MS_RABBITMQ = '@midwayjs/rabbitmq',
   WS_IO = '@midwayjs/socketio',
-  WSS = '',
+  WSS = '@midwayjs/ws',
   SERVERLESS_APP = '@midwayjs/serverless-app',
   CUSTOM = '',
   EMPTY = 'empty',
