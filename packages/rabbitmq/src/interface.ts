@@ -11,7 +11,7 @@ export interface IRabbitMQApplication {
   close(): Promise<void>;
 }
 
-export type IMidwayRabbitMQApplication = IMidwayApplication<IMidwayRabbitMQContext> & IRabbitMQApplication;
+export type IMidwayRabbitMQApplication = IMidwayApplication<IMidwayRabbitMQContext, IRabbitMQApplication>;
 
 export interface IRabbitMQExchange {
   name: string,
@@ -27,7 +27,7 @@ export interface IMidwayRabbitMQConfigurationOptions extends IConfigurationOptio
   useConfirmChannel?: boolean;
 }
 
-export type IMidwayRabbitMQContext = {
+export type IMidwayRabbitMQContext = IMidwayContext<{
   channel: amqp.Channel;
   startTime: number;
   queueName: string;
